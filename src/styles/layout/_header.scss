@@ -4,15 +4,36 @@ header {
     padding: $spacing-md;
     background-color: $background-color-inverse;
     color: $color-text-inverse;
+    display: flex;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        width: 100px;
+    }
 
     nav {
         ul {
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
+            justify-content: center;
+            gap: 2rem;
             li {
                 display: inline-block;
+                font-size: 1.25rem;
+                a {
+                    color: $color-text-inverse;
+                }
             }
         }
+    }
+
+    .logo-wrapper {
+        background-color: #ffffff;
+        border-radius: 20px;
+        padding: .5rem
     }
 }
