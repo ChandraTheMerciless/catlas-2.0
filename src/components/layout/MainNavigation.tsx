@@ -1,5 +1,5 @@
 import React from'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import "styles/layout/_header.scss"
 
@@ -14,19 +14,19 @@ const MainNavigation = () => {
             <nav>
                 <ul>
                     <li>
-                        <Link to='/'>Home</Link>
+                        <NavLink to='/' className={({isActive}) => isActive ? "active" : undefined} end>Home</NavLink>
                     </li>
                     <li>
-                        <Link to='/map'>Map</Link>
+                        <NavLink to='/map' className={({isActive}) => isActive ? "active" : undefined}>Map</NavLink>
                     </li>
                     <li>
-                        <Link to='/cat-finder'>Cat Finder</Link>
+                        <NavLink to='/cat-finder' className={({isActive}) => isActive ? "active" : undefined}>Cat Finder</NavLink>
                     </li>
                     <li>
-                        <Link to='/about'>About</Link>
+                        <NavLink to='/about' className={({isActive}) => isActive ? "active" : undefined}>About</NavLink>
                     </li>
                     <li>
-                        <Link to='/contact'>Contact</Link>
+                        <NavLink to='/contact' className={({isActive}) => isActive ? "active" : undefined}>Contact</NavLink>
                     </li>
                 </ul>
             </nav>

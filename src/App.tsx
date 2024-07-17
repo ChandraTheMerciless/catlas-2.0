@@ -1,6 +1,13 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import Home from 'components/pages/Home';
+import Map from 'components/pages/Map';
+import CatFinder from 'components/pages/CatFinder';
+import About from 'components/pages/About';
+import Contact from 'components/pages/Contact';
+import CatDetails from 'components/pages/CatDetails';
+
 import Root from 'components/layout/Root';
 
 import 'styles/main.scss';
@@ -12,23 +19,27 @@ const router  = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <h1>Home</h1>
+        element: <Home />
       },
       {
         path: '/map',
-        element: <h1>Map</h1>
+        element: <Map />
       },
       {
         path: '/cat-finder',
-        element: <h1>Cat Finder</h1>
+        element: <CatFinder />
+      },
+      {
+        path: '/cat-finder/:id',
+        element: <CatDetails />
       },
       {
         path: '/about',
-        element: <h1>About</h1>
+        element: <About />
       },
       {
         path: '/contact',
-        element: <h1>Contact</h1>
+        element: <Contact />
       }
     ]
   }

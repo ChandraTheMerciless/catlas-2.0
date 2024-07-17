@@ -20,12 +20,22 @@ header {
             display: flex;
             flex-direction: row;
             justify-content: center;
-            gap: 2rem;
+            gap: 1rem;
             li {
                 display: inline-block;
-                font-size: 1.25rem;
+                font-size: 1.5rem;
                 a {
+                    padding: 1rem;
                     color: $color-text-inverse;
+                    font-weight: bold;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
+                    &.active {
+                        color: $color-primary;
+                    }
                 }
             }
         }
