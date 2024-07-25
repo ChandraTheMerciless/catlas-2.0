@@ -1,20 +1,12 @@
 import { Link } from "react-router-dom";
+import { CatListState } from "@store/types";
 
-interface CatProps {
-    id: string;
-    name: string;
-}
-
-interface CatListProps {
-    items: CatProps[];
-}
-
-const CatList = ({items}: CatListProps) => {
+const CatList = ({cats}: CatListState) => {
     return (
         <>
             <h2>cat list!</h2>
 
-            {items.map(cat => (
+            {cats.map(cat => (
                 <Link to={`/cat-finder/${cat.id}`}>
                     <div key={cat.id}>
                         <h3>{cat.name}</h3>

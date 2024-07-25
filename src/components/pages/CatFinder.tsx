@@ -1,3 +1,6 @@
+import { useSelector } from "react-redux";
+import { RootState } from "@store/index";
+
 import CatList from "components/shared/CatList";
 
 
@@ -17,27 +20,15 @@ import CatList from "components/shared/CatList";
 // }
 
 // To be moved to redux storage
-const DUMMY_CAT_STORAGE = [
-    {
-        id: 'c1',
-        name: 'Andromeda'
-    },
-    {
-        id: 'c2',
-        name: 'Yuki'
-    },
-    {
-        id: 'c3',
-        name: 'Leah'
-    }
-]
 
 const CatFinder = () => {
+    const cats = useSelector((state: RootState) => state.cats.cats )
+
     return (
         <>
             <h1>CatFinder</h1>
 
-            <CatList items={DUMMY_CAT_STORAGE} />
+            <CatList cats={cats} />
         </>
     )
 }

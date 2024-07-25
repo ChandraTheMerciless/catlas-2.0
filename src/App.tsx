@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { AppDispatch } from './store';
 
+// import { fetchCats } from '@store/cats-actions'; // not sure why this wasn't importing, but I will look at it later
+import { fetchCats } from './store/cats-actions';
 import Home from 'components/pages/Home';
 import Map from 'components/pages/Map';
 import CatFinder from 'components/pages/CatFinder';
@@ -46,6 +50,12 @@ const router  = createBrowserRouter([
 ]);
 
 function App() {
+  const dispatch: AppDispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCats());
+  }, [dispatch]);
+
   return (
     <RouterProvider router={router} />
   );
