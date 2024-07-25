@@ -6,9 +6,9 @@ const CatList = ({cats}: CatListState) => {
         <>
             <h2>cat list!</h2>
 
-            {cats.map(cat => (
-                <Link to={`/cat-finder/${cat.id}`}>
-                    <div key={cat.id}>
+            {cats.map((cat, idx) => (
+                <Link key={`${cat.name}-${idx}`} to={`/cat-finder/${cat.id}`}>
+                    <div>
                         <h3>{cat.name}</h3>
                     </div>
                 </Link>
