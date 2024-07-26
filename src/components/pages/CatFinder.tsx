@@ -7,11 +7,11 @@ const CatFinder = () => {
     const cats = useSelector((state: RootState) => state.cats.cats )
 
     return (
-        <>
+        <div>
             <h1>CatFinder</h1>
 
             <CatList cats={cats} />
-        </>
+        </div>
     )
 }
 

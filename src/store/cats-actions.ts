@@ -3,6 +3,11 @@ import { catsActions } from "./cats-slice";
 
 import { format } from "date-fns";
 
+// temporary until I store these in the db
+import Andromeda from 'assets/images/Andromeda_SuspiciouslyFlickingTail.jpg';
+import Yuki from 'assets/images/Yuki_ProudlyRelaxing.jpg';
+import Leah from 'assets/images/Leah_SnarlYawning.jpg';
+
 // Some object details that Cody generated. Holding on to this for later in case it has something I don't think of.
 // {
 //     id: 'c1',
@@ -26,35 +31,29 @@ export const fetchCats = () => {
         {
             id: 'c1',
             name: 'Andromeda',
-            image: '',
-            description: '',
+            image: Andromeda,
+            description: 'Large fluffy potato. A little skittsh, but also very nice.',
             location: '',
             dateFound: new Date(2023, 1, 12),
-            status: '',
-            contact: '',
-            longDescription: '',
+            status: 'Adopted',
         },
         {
             id: 'c2',
             name: 'Yuki',
-            image: '',
-            description: '',
+            image: Yuki,
+            description: 'Tiny skinny noodle. Amazing at parkour and generally looking adorable.',
             location: '',
             dateFound: new Date(2022, 1, 5),
             status: '',
-            contact: '',
-            longDescription: '',
         },
         {
             id: 'c3',
             name: 'Leah',
-            image: '',
-            description: '',
+            image: Leah,
+            description: 'Small spicy sweet potato. Friendly with strangers, not too shy to bite you awake when it\'s time for breakfast.',
             location: '',
             dateFound: new Date(2021, 1, 7),
             status: '',
-            contact: '',
-            longDescription: '',
         }
         ]
     };

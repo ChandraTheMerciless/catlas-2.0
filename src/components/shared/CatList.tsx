@@ -6,13 +6,18 @@ const CatList = ({cats}: CatListState) => {
         <>
             <h2>cat list!</h2>
 
-            {cats.map((cat, idx) => (
-                <Link key={`${cat.name}-${idx}`} to={`/cat-finder/${cat.id}`}>
-                    <div>
-                        <h3>{cat.name}</h3>
-                    </div>
-                </Link>
-            ))}
+            {cats.length > 0 && 
+                <div className="cat-list">
+                    {cats.map((cat, idx) => (
+                        <div className="card-wrapper">
+                            <Link key={`${cat.name}-${idx}`} to={`/cat-finder/${cat.id}`}>
+                                <h3>{cat.name}</h3>
+                                <img src={cat.image} alt="" aria-hidden />
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+            }
         </>
     )
 }

@@ -1,0 +1,12 @@
+.cat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    .card-wrapper {
+        background-color: #ffffff;
+    
+        img {
+            width: 100px;
+        }
+    }
+}

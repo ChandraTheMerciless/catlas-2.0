@@ -10,8 +10,8 @@ export interface CatState {
     location: string;
     dateFound: Date,
     status: string,
-    contact: string,
-    longDescription: string,
+    contact?: string,
+    longDescription?: string,
 }
 
 export interface CatListState {
